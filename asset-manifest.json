@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ColourfulEggPage/static/css/main.ad563273.css",
+    "main.js": "/ColourfulEggPage/static/js/main.ba05d137.js",
+    "index.html": "/ColourfulEggPage/index.html",
+    "main.ad563273.css.map": "/ColourfulEggPage/static/css/main.ad563273.css.map",
+    "main.ba05d137.js.map": "/ColourfulEggPage/static/js/main.ba05d137.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ad563273.css",
+    "static/js/main.ba05d137.js"
+  ]
+}
