@@ -1,0 +1,59 @@
+@media (max-width: 768px) {
+    .fixed.bottom-8.left-8 {
+        bottom: 1rem;
+        left: 1rem;
+    }
+}
+
+
+@keyframes makeVisible {
+    0% { 
+        visibility: hidden;
+        opacity: 0;
+    }
+    1% {
+        visibility: visible;
+        opacity: 0;
+    }
+    100% { 
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes breathe {
+    0% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(1.05); }
+    100% { opacity: 0.2; transform: scale(1); }
+}
+
+    @keyframes breatheScale {
+    0% { opacity: 0.1; transform: scale(1); }
+    50% { opacity: 0.25; transform: scale(1.1); }
+    100% { opacity: 0.1; transform: scale(1); }
+}
+
+    .group:hover .absolute {
+    animation-play-state: paused;
+    animation-delay: 0s !important;
+}
+    /* Hover state will pause animations */
+    .group:hover > * {
+        animation-play-state: paused;
+    }
