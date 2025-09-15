@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ColourfulEggPage/static/css/main.770027f1.css",
-    "main.js": "/ColourfulEggPage/static/js/main.29dc45ef.js",
+    "main.js": "/ColourfulEggPage/static/js/main.541944ff.js",
     "index.html": "/ColourfulEggPage/index.html",
     "main.770027f1.css.map": "/ColourfulEggPage/static/css/main.770027f1.css.map",
-    "main.29dc45ef.js.map": "/ColourfulEggPage/static/js/main.29dc45ef.js.map"
+    "main.541944ff.js.map": "/ColourfulEggPage/static/js/main.541944ff.js.map"
   },
   "entrypoints": [
     "static/css/main.770027f1.css",
-    "static/js/main.29dc45ef.js"
+    "static/js/main.541944ff.js"
   ]
 }
