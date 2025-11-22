@@ -29,7 +29,7 @@ function App() {
   
   // Use basename only in production (when PUBLIC_URL is set)
   // In development, PUBLIC_URL will be empty string
-  const basename = process.env.NODE_ENV === 'production' ? process.env.PUBLIC_URL : '';
+  const basename = process.env.NODE_ENV === 'production' ? (process.env.PUBLIC_URL || '') : '';
   
   return (
 
