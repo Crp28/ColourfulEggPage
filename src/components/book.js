@@ -563,7 +563,7 @@ const UniversityBook = () => {
                     >
                         <div className="flex items-center justify-between mb-4">
                             <h2 className="text-3xl font-bold text-blue-900">奥克兰理⼯大学</h2>
-                            <img src={`${process.env.PUBLIC_URL}/AUTlogo.png`} alt="奥克兰理⼯大学校徽" className="h-16 object-contain" />
+                            <img src={`${process.env.PUBLIC_URL}/AUTlogo.jpg`} alt="奥克兰理⼯大学校徽" className="h-16 object-contain" />
                         </div>
 
                         <div className="mb-4">
