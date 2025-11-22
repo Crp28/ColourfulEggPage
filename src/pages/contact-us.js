@@ -437,7 +437,7 @@ export const ContactUs = () => {
                                     <div className="flex justify-center">
                                         <div className="w-24 h-24 bg-white rounded-lg flex items-center justify-center">
                                             <img
-                                                src="/QR.jpg"
+                                                src="./QR.jpg"
                                                 alt="WeChat QR Code"
                                                 className="w-20 h-20 object-contain"
                                             />
@@ -891,7 +891,7 @@ export const ContactUsEN = () => {
                                     <div className="flex justify-center">
                                         <div className="w-24 h-24 bg-white rounded-lg flex items-center justify-center">
                                             <img
-                                                src="/QR.jpg"
+                                                src="./QR.jpg"
                                                 alt="WeChat QR Code"
                                                 className="w-20 h-20 object-contain"
                                             />

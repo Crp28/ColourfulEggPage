@@ -254,7 +254,7 @@ export const HomePageZH = () => {
                             <div className="flex items-center h-full">
                                 <div className="max-w-2xl text-white">
                                     <h1 className="text-5xl font-bold mb-6">您的新西兰生活由此开始</h1>
-                                    <p className="text-xl mb-8">Placeholder text.</p>
+                                    <p className="text-xl mb-8">奥克兰，新西兰</p>
                                     <button className="inline-flex items-center bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors">
                                         Learn More
                                         <ChevronRight className="ml-2" />

@@ -48,7 +48,7 @@ export const Nav = () => {
 
     // handles language change
     const handleLanguageChange = (language) => {
-        navigate(`/${language}${location.pathname.slice(3)}`)
+        navigate(`${language}${location.pathname.slice(3)}`)
     }
 
 
@@ -60,7 +60,7 @@ export const Nav = () => {
                     {/* Left side: Logo and Navigation */}
                     <div className="flex items-center space-x-8 hover:cursor-pointer">
                         <img
-                            src="./logo.png"
+                            src={process.env.PUBLIC_URL + "/logo.png"}
                             alt="Colourful Egg Education Logo"
                             className="h-12 object-contain"
                             onClick={() => { navigate(`${getLang(location)}`) }}

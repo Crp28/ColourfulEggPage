@@ -28,37 +28,37 @@ function App() {
   })
   return (
 
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename="/ColourfulEggPage">
       <ScrollToTop />
       <div className="App d-flex flex-column min-vh-100">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <Routes>
-          <Route path="/" element={<Navigate to="/zh" />}></Route>
-          <Route path="/zh" element={<><Nav /><HomePageZH /></>}></Route>
-          <Route path="/zh/guide" element={<><Nav /><CharacterSelection /></>}></Route>
-          <Route path="/zh/LifeinNZ" element={<><Nav /><NZLife /></>}></Route>
-          <Route path="/zh/colourfulstudy" element={<><div className="fixed inset-0 -z-10 bg-gray-500" /><Nav /><ColourfulStudy /></>}></Route>
-          <Route path="/zh/colourfulstudy/PriSecStudy" element={<><Nav /><PriSecStudy /></>}></Route>
-          <Route path="/zh/colourfulstudy/BachelorStudy" element={<><Nav /><BachelorStudy /></>}></Route>
-          <Route path="/zh/colourfulstudy/MasterStudy" element={<><Nav /></>}></Route>
-          <Route path="/zh/colourfulstudy/FoundationStudy" element={<><Nav /><FoundationStudy /></>}></Route>
-          <Route path="/zh/aboutus" element={<><Nav /></>}></Route>
-          <Route path="/zh/immigration" element={<><Nav /><Immigration /></>}></Route>
-          <Route path="/zh/connect" element={<><Nav /><ContactUs /></>}></Route>
+          <Route path="" element={<Navigate to="zh" />}></Route>
+          <Route path="zh" element={<><Nav /><HomePageZH /></>}></Route>
+          <Route path="zh/guide" element={<><Nav /><CharacterSelection /></>}></Route>
+          <Route path="zh/LifeinNZ" element={<><Nav /><NZLife /></>}></Route>
+          <Route path="zh/colourfulstudy" element={<><div className="fixed inset-0 -z-10 bg-gray-500" /><Nav /><ColourfulStudy /></>}></Route>
+          <Route path="zh/colourfulstudy/PriSecStudy" element={<><Nav /><PriSecStudy /></>}></Route>
+          <Route path="zh/colourfulstudy/BachelorStudy" element={<><Nav /><BachelorStudy /></>}></Route>
+          <Route path="zh/colourfulstudy/MasterStudy" element={<><Nav /></>}></Route>
+          <Route path="zh/colourfulstudy/FoundationStudy" element={<><Nav /><FoundationStudy /></>}></Route>
+          <Route path="zh/aboutus" element={<><Nav /></>}></Route>
+          <Route path="zh/immigration" element={<><Nav /><Immigration /></>}></Route>
+          <Route path="zh/connect" element={<><Nav /><ContactUs /></>}></Route>
           <Route path="*" element={<><Nav /><NotFound /></>} />
 
-          <Route path="/en" element={<><NavEN /></>}></Route>
-          <Route path="/en/guide" element={<><NavEN /><CharacterSelectionEN /></>}></Route>
-          <Route path="/en/LifeinNZ" element={<><NavEN /><NZLife /></>}></Route>
-          <Route path="/en/colourfulstudy" element={<><div className="fixed inset-0 -z-10 bg-gray-500" /><Nav /></>}></Route>
-          <Route path="/en/colourfulstudy/PriSecStudy" element={<><NavEN /></>}></Route>
-          <Route path="/en/colourfulstudy/BachelorStudy" element={<><NavEN /></>}></Route>
-          <Route path="/en/colourfulstudy/MasterStudy" element={<><NavEN /></>}></Route>
-          <Route path="/en/colourfulstudy/FoundationStudy" element={<><NavEN /></>}></Route>
-          <Route path="/en/aboutus" element={<><NavEN /></>}></Route>
-          <Route path="/en/immigration" element={<><NavEN /></>}></Route>
-          <Route path="/en/connect" element={<><NavEN /><ContactUsEN /></>}></Route>
+          <Route path="en" element={<><NavEN /></>}></Route>
+          <Route path="en/guide" element={<><NavEN /><CharacterSelectionEN /></>}></Route>
+          <Route path="en/LifeinNZ" element={<><NavEN /><NZLife /></>}></Route>
+          <Route path="en/colourfulstudy" element={<><div className="fixed inset-0 -z-10 bg-gray-500" /><Nav /></>}></Route>
+          <Route path="en/colourfulstudy/PriSecStudy" element={<><NavEN /></>}></Route>
+          <Route path="en/colourfulstudy/BachelorStudy" element={<><NavEN /></>}></Route>
+          <Route path="en/colourfulstudy/MasterStudy" element={<><NavEN /></>}></Route>
+          <Route path="en/colourfulstudy/FoundationStudy" element={<><NavEN /></>}></Route>
+          <Route path="en/aboutus" element={<><NavEN /></>}></Route>
+          <Route path="en/immigration" element={<><NavEN /></>}></Route>
+          <Route path="en/connect" element={<><NavEN /><ContactUsEN /></>}></Route>
         </Routes>
         <Footer />
       </div>
