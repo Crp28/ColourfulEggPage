@@ -281,7 +281,7 @@ export const ColourfulStudy = () => {
             <div
                 className="absolute inset-0 opacity-0"
                 style={{
-                    backgroundImage: `url('/Lincoln.jpg')`,
+                    backgroundImage: `url('${process.env.PUBLIC_URL}/Lincoln.jpg')`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     animation: 'fadeIn 1s ease-out forwards'

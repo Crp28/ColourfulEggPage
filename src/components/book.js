@@ -23,7 +23,7 @@ const Page = React.forwardRef((props, ref) => {
                 <div
                     className="absolute inset-0 bg-no-repeat"
                     style={{
-                        backgroundImage: `url(${props.spreadBackground})`,
+                        backgroundImage: `url(${process.env.PUBLIC_URL}${props.spreadBackground})`,
                         backgroundSize: '1200px 800px',
                         backgroundPosition: props.isLeftPage ? 'left center' : 'right center'
                     }}
@@ -119,7 +119,7 @@ const UniversityBook = () => {
                             <h1 className="text-5xl font-bold text-blue-900 mb-6">新西兰国立大学</h1>
                             <div className="w-20 h-1 bg-orange-500 mb-8" />
                             <div className="grid grid-cols-2 align-middle justify-center" >
-                                <img src="/CoolEgg.png" alt="GuidingEgg" />
+                                <img src={`${process.env.PUBLIC_URL}/CoolEgg.png`} alt="GuidingEgg" />
                                 <div className="text-gray-600 text-xl max-w-lg leading-relaxed m-auto">
                                     点击右侧大学校徽或书页角落翻动书本！
                                 </div>
@@ -136,13 +136,13 @@ const UniversityBook = () => {
                                     className="cursor-pointer transform hover:scale-105 transition-transform duration-300"
                                     onClick={() => bookRef.current?.pageFlip().flip(0)}
                                 >
-                                    <img src="/UoAlogo.png" alt="University of Auckland" className="w-full object-contain" />
+                                    <img src={`${process.env.PUBLIC_URL}/UoAlogo.png`} alt="University of Auckland" className="w-full object-contain" />
                                 </div>
                                 <div
                                     className="cursor-pointer transform hover:scale-105 transition-transform duration-300"
                                     onClick={() => bookRef.current?.pageFlip().flip(2)}
                                 >
-                                    <img src="/Otagologo.png" alt="University of Otago" className="w-full object-contain" />
+                                    <img src={`${process.env.PUBLIC_URL}/Otagologo.png`} alt="University of Otago" className="w-full object-contain" />
                                 </div>
                                 <div className="flex flex-col items-center justify-center text-center">
                                     <h1 className="text-xl font-bold text-blue-900">New Zealand Universities</h1>
@@ -155,20 +155,20 @@ const UniversityBook = () => {
                                     className="cursor-pointer transform hover:scale-105 transition-transform duration-300"
                                     onClick={() => bookRef.current?.pageFlip().flip(4)}
                                 >
-                                    <img src="/Masseylogo.jpg" alt="Massey University" className="w-full object-contain" />
+                                    <img src={`${process.env.PUBLIC_URL}/Masseylogo.jpg`} alt="Massey University" className="w-full object-contain" />
                                 </div>
                                 <div
                                     className="cursor-pointer transform hover:scale-105 transition-transform duration-300"
                                     onClick={() => bookRef.current?.pageFlip().flip(6)}
                                 >
-                                    <img src="/UoWlogo.png" alt="University of Waikato" className="w-full object-contain" />
+                                    <img src={`${process.env.PUBLIC_URL}/UoWlogo.png`} alt="University of Waikato" className="w-full object-contain" />
                                 </div>
 
                                 <div
                                     className="cursor-pointer transform hover:scale-105 transition-transform duration-300"
                                     onClick={() => bookRef.current?.pageFlip().flip(8)}
                                 >
-                                    <img src="/Viclogo.png" alt="Victoria University of Wellington" className="w-full object-contain" />
+                                    <img src={`${process.env.PUBLIC_URL}/Viclogo.png`} alt="Victoria University of Wellington" className="w-full object-contain" />
                                 </div>
 
                                 {/* Bottom Row */}
@@ -176,19 +176,19 @@ const UniversityBook = () => {
                                     className="cursor-pointer transform hover:scale-105 transition-transform duration-300"
                                     onClick={() => bookRef.current?.pageFlip().flip(10)}
                                 >
-                                    <img src="/UClogo.png" alt="University of Canterbury" className="w-full object-contain" />
+                                    <img src={`${process.env.PUBLIC_URL}/UClogo.png`} alt="University of Canterbury" className="w-full object-contain" />
                                 </div>
                                 <div
                                     className="cursor-pointer transform hover:scale-105 transition-transform duration-300"
                                     onClick={() => bookRef.current?.pageFlip().flip(12)}
                                 >
-                                    <img src="/Lincolnlogo.png" alt="Lincoln University" className="w-full object-contain" />
+                                    <img src={`${process.env.PUBLIC_URL}/Lincolnlogo.png`} alt="Lincoln University" className="w-full object-contain" />
                                 </div>
                                 <div
                                     className="cursor-pointer transform hover:scale-105 transition-transform duration-300"
                                     onClick={() => bookRef.current?.pageFlip().flip(14)}
                                 >
-                                    <img src="/AUTlogo.jpg" alt="Auckland University of Technology" className="w-full object-contain" />
+                                    <img src={`${process.env.PUBLIC_URL}/AUTlogo.jpg`} alt="Auckland University of Technology" className="w-full object-contain" />
                                 </div>
                             </div>
                         </div>
@@ -202,7 +202,7 @@ const UniversityBook = () => {
                     >
                         <div className="flex items-center justify-between mb-4">
                             <h2 className="text-3xl font-bold text-blue-900">奥克兰大学</h2>
-                            <img src="/UoAlogo.png" alt="奥克兰大学校徽" className="h-16 object-contain" />
+                            <img src={`${process.env.PUBLIC_URL}/UoAlogo.png`} alt="奥克兰大学校徽" className="h-16 object-contain" />
                         </div>
 
                         <div className="mb-4">
@@ -263,7 +263,7 @@ const UniversityBook = () => {
                     >
                         <div className="flex items-center justify-between mb-4">
                             <h2 className="text-3xl font-bold text-blue-900">奥塔哥大学</h2>
-                            <img src="/Otagologo.png" alt="奥塔哥大学校徽" className="h-16 object-contain" />
+                            <img src={`${process.env.PUBLIC_URL}/Otagologo.png`} alt="奥塔哥大学校徽" className="h-16 object-contain" />
                         </div>
 
                         <div className="mb-4">
@@ -299,7 +299,7 @@ const UniversityBook = () => {
                     >
                         <div className="flex items-center justify-between mb-4">
                             <h2 className="text-3xl font-bold text-blue-900">梅西大学</h2>
-                            <img src="/Masseylogo.jpg" alt="梅西大学校徽" className="h-16 object-contain" />
+                            <img src={`${process.env.PUBLIC_URL}/Masseylogo.jpg`} alt="梅西大学校徽" className="h-16 object-contain" />
                         </div>
 
                         <div className="mb-4">
@@ -357,7 +357,7 @@ const UniversityBook = () => {
                     >
                         <div className="flex items-center justify-between mb-4">
                             <h2 className="text-3xl font-bold text-blue-900">怀卡托大学</h2>
-                            <img src="/UoWlogo.png" alt="怀卡托大学校徽" className="h-16 object-contain" />
+                            <img src={`${process.env.PUBLIC_URL}/UoWlogo.png`} alt="怀卡托大学校徽" className="h-16 object-contain" />
                         </div>
 
                         <div className="mb-4">
@@ -392,7 +392,7 @@ const UniversityBook = () => {
                     >
                         <div className="flex items-center justify-between mb-4">
                             <h2 className="text-3xl font-bold text-blue-900">惠灵顿维多利亚大学</h2>
-                            <img src="/Viclogo.png" alt="惠灵顿维多利亚大学校徽" className="h-16 object-contain" />
+                            <img src={`${process.env.PUBLIC_URL}/Viclogo.png`} alt="惠灵顿维多利亚大学校徽" className="h-16 object-contain" />
                         </div>
 
                         <div className="mb-4">
@@ -455,7 +455,7 @@ const UniversityBook = () => {
                     >
                         <div className="flex items-center justify-between mb-4">
                             <h2 className="text-3xl font-bold text-blue-900">坎特伯雷大学</h2>
-                            <img src="/UClogo.png" alt="坎特伯雷大学校徽" className="h-16 object-contain" />
+                            <img src={`${process.env.PUBLIC_URL}/UClogo.png`} alt="坎特伯雷大学校徽" className="h-16 object-contain" />
                         </div>
 
                         <div className="mb-4">
@@ -509,7 +509,7 @@ const UniversityBook = () => {
                     >
                         <div className="flex items-center justify-between mb-4">
                             <h2 className="text-3xl font-bold text-blue-900">林肯大学</h2>
-                            <img src="/Lincolnlogo.png" alt="林肯大学校徽" className="h-16 object-contain" />
+                            <img src={`${process.env.PUBLIC_URL}/Lincolnlogo.png`} alt="林肯大学校徽" className="h-16 object-contain" />
                         </div>
 
                         <div className="mb-4">
@@ -563,7 +563,7 @@ const UniversityBook = () => {
                     >
                         <div className="flex items-center justify-between mb-4">
                             <h2 className="text-3xl font-bold text-blue-900">奥克兰理⼯大学</h2>
-                            <img src="/AUTlogo.png" alt="奥克兰理⼯大学校徽" className="h-16 object-contain" />
+                            <img src={`${process.env.PUBLIC_URL}/AUTlogo.png`} alt="奥克兰理⼯大学校徽" className="h-16 object-contain" />
                         </div>
 
                         <div className="mb-4">

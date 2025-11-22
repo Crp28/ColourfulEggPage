@@ -303,7 +303,7 @@ export const NZLife = () => {
                 <img src={`${process.env.PUBLIC_URL}/NZLifeEgg.png`} alt="EggLogo" className="absolute right-0 md:h-48 h-32" />
                 <div className="absolute inset-0">
                     <img
-                        src="/api/placeholder/1600/900"
+                        src={`${process.env.PUBLIC_URL}/campus_night.jpg`}
                         alt="New Zealand Landscape"
                         className="w-full h-full object-cover opacity-50"
                     />
