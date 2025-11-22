@@ -797,7 +797,488 @@ export const NZLifeCN = () => {
 };
 
 // English version
-export const NZLifeEN = NZLifeCN;
+export const NZLifeEN = () => {
+    // Define sections for the floating navigation
+    const location = useLocation;
+    const sections = [
+        { id: "top", label: "Back to Top" },
+        { id: "cities", label: "Cities" },
+        { id: "culture", label: "Culture" },
+        { id: "transport", label: "Transport" },
+        { id: "accommodation", label: "Accommodation" },
+        { id: "eats", label: "Food" }
+    ];
+
+    useEffect(() => {
+        // Check if location has a hash
+        if (location.hash) {
+            // Remove the # symbol
+            console.log(location.hash)
+            const id = location.hash.replace('#', '');
+
+            // Find the element with this id
+            const element = document.getElementById(id);
+
+            // If the element exists, scroll to it with a small delay to ensure page is fully loaded
+            if (element) {
+                setTimeout(() => {
+                    const headerHeight = 80; // Adjust based on your header height
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = window.pageYOffset + elementPosition - headerHeight;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }, 300);
+            }
+        }
+    }, [location]);
+
+    return (
+        <div className="min-h-screen bg-gray-50 pt-20">
+            {/* Hero Section */}
+            <section id="top" className="relative bg-blue-900 overflow-hidden" style={{ height: 'calc(100vh - 5rem)' }}>
+                <img src={`${process.env.PUBLIC_URL}/NZLifeEgg.png`} alt="EggLogo" className="absolute right-0 md:h-48 h-32" />
+                <div className="absolute inset-0">
+                    <img
+                        src={`${process.env.PUBLIC_URL}/campus_night.jpg`}
+                        alt="New Zealand Landscape"
+                        className="w-full h-full object-cover opacity-50"
+                    />
+                </div>
+                <div className="relative container mx-auto px-4 h-full flex items-center z-10">
+                    <div className="max-w-2xl text-white">
+                        <h1 className="text-5xl font-bold mb-4">"The Last Paradise on Earth"</h1>
+                        <div className="w-20 h-1 bg-orange-500 mb-6"></div>
+                        <p className="text-xl mb-8">
+                            Discover this beautiful South Pacific island nation and experience its pleasant climate, friendly culture, spectacular natural scenery, and high quality of life. Here, you'll find a safe, inclusive, and vibrant lifestyle.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Cities Section */}
+            <section id="cities" className="py-16 bg-white">
+                <div className="container mx-auto px-4">
+                    <AnimatedSection animation="fade">
+                        <h2 className="text-3xl font-bold text-blue-900 mb-12 text-center">
+                            New Zealand Cities Overview
+                            <div className="w-24 h-1 bg-orange-500 mx-auto mt-4"></div>
+                        </h2>
+                    </AnimatedSection>
+
+                    <AnimatedSection animation="slideUp" delay={0.2}>
+                        <div className="mb-12">
+                            <Cities />
+                        </div>
+                    </AnimatedSection>
+
+                    <AnimatedSection animation="slideUp" delay={0.3}>
+                        <div className="max-w-4xl mx-auto bg-blue-50 p-8 rounded-lg shadow-sm">
+                            <h3 className="text-2xl font-bold text-blue-900 mb-4">Quick Facts</h3>
+
+                            <div className="grid md:grid-cols-2 gap-6">
+                                <div className="flex items-start">
+                                    <div className="flex-shrink-0 mt-1 mr-4 w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center">
+                                        <div className="w-4 h-4 bg-orange-500 rounded-full"></div>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-semibold text-blue-800 mb-2">Official Languages</h4>
+                                        <p className="text-gray-600">English, Māori, New Zealand Sign Language</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start">
+                                    <div className="flex-shrink-0 mt-1 mr-4 w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center">
+                                        <div className="w-4 h-4 bg-orange-500 rounded-full"></div>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-semibold text-blue-800 mb-2">Climate</h4>
+                                        <div className="flex flex-row gap-6">
+                                            <p className="text-gray-600">Summer: Average 24°C</p>
+                                            <p className="text-gray-600">Winter: Average 16°C</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </AnimatedSection>
+                </div>
+            </section>
+
+            {/* Culture Section */}
+            <section id="culture" className="py-16 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <div className="flex justify-end">
+                        <AnimatedSection animation="slideLeft">
+                            <h2 className="text-4xl font-bold text-blue-900 text-right">New Zealand's Unique Multicultural Heritage</h2>
+                        </AnimatedSection>
+                    </div>
+                    <Bubbles />
+                </div>
+            </section>
+
+            {/* Transport Section */}
+            <section id="transport" className="py-16 bg-blue-50/90" >
+                <div className="container mx-auto px-4">
+                    <AnimatedSection animation="fade" delay={0.1}>
+                        <div className="mb-16 text-left">
+                            <h2 className="text-5xl font-bold text-blue-900">
+                                Getting Around
+                                <div className="w-32 h-2 bg-orange-500 mt-6"></div>
+                            </h2>
+                        </div>
+                    </AnimatedSection>
+
+                    <div className="grid md:grid-cols-3 gap-12 mb-16">
+                        <AnimatedSection animation="slideUp" delay={0.2}>
+                            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow h-full">
+                                <div className="bg-blue-100 rounded-full p-6 w-20 h-20 flex items-center justify-center mb-6">
+                                    <svg className="w-10 h-10 text-blue-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                                    </svg>
+                                </div>
+                                <h3 className="text-2xl font-bold text-blue-900 mb-10">Public Transport</h3>
+
+                                <div className="space-y-4">
+                                    <p className="text-gray-600 mb-4">
+                                        Major cities like Auckland, Wellington, and Christchurch have well-developed public transport systems including buses, trains, and ferries.
+                                    </p>
+
+                                    <div className="flex items-start">
+                                        <div className="flex-shrink-0 mt-1 mr-3 w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center">
+                                            <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-blue-800">Auckland</p>
+                                            <p className="text-sm text-gray-600">AT HOP card - buses, trains, ferries</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-start">
+                                        <div className="flex-shrink-0 mt-1 mr-3 w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center">
+                                            <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-blue-800">Wellington</p>
+                                            <p className="text-sm text-gray-600">Snapper card - buses, trains</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-start">
+                                        <div className="flex-shrink-0 mt-1 mr-3 w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center">
+                                            <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-blue-800">Christchurch</p>
+                                            <p className="text-sm text-gray-600">Metro card - buses</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </AnimatedSection>
+
+                        <AnimatedSection animation="slideUp" delay={0.3}>
+                            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow h-full">
+                                <div className="bg-blue-100 rounded-full p-6 w-20 h-20 flex items-center justify-center mb-6">
+                                    <svg className="w-10 h-10 text-blue-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <h3 className="text-2xl font-bold text-blue-900 mb-10">Driving</h3>
+
+                                <div className="space-y-4">
+                                    <p className="text-gray-600 mb-4">
+                                        New Zealand drives on the left side of the road. International students can drive with a valid overseas license or International Driving Permit (IDP).
+                                    </p>
+
+                                    <div className="flex items-start">
+                                        <div className="flex-shrink-0 mt-1 mr-3 w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center">
+                                            <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-blue-800">Driver's License Requirements</p>
+                                            <p className="text-sm text-gray-600">Valid for 12 months from entry date</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-start">
+                                        <div className="flex-shrink-0 mt-1 mr-3 w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center">
+                                            <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-blue-800">Road Rules</p>
+                                            <p className="text-sm text-gray-600">Drive on the left, give way to the right</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-start">
+                                        <div className="flex-shrink-0 mt-1 mr-3 w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center">
+                                            <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-blue-800">Parking</p>
+                                            <p className="text-sm text-gray-600">Pay attention to time limits and zones</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </AnimatedSection>
+
+                        <AnimatedSection animation="slideUp" delay={0.4}>
+                            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow h-full">
+                                <div className="bg-blue-100 rounded-full p-6 w-20 h-20 flex items-center justify-center mb-6">
+                                    <svg className="w-10 h-10 text-blue-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <h3 className="text-2xl font-bold text-blue-900 mb-10">Cycling</h3>
+
+                                <div className="space-y-4">
+                                    <p className="text-gray-600 mb-4">
+                                        Cycling is a popular and eco-friendly way to get around. Many cities have dedicated bike lanes and beautiful cycling routes.
+                                    </p>
+
+                                    <div className="flex items-start">
+                                        <div className="flex-shrink-0 mt-1 mr-3 w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center">
+                                            <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-blue-800">Safety First</p>
+                                            <p className="text-sm text-gray-600">Helmets are mandatory by law</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-start">
+                                        <div className="flex-shrink-0 mt-1 mr-3 w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center">
+                                            <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-blue-800">Bike Sharing</p>
+                                            <p className="text-sm text-gray-600">Available in major cities</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-start">
+                                        <div className="flex-shrink-0 mt-1 mr-3 w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center">
+                                            <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-blue-800">Cycle Trails</p>
+                                            <p className="text-sm text-gray-600">Extensive network of scenic routes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </AnimatedSection>
+                    </div>
+                </div>
+            </section>
+
+            {/* Accommodation Section */}
+            <section id="accommodation" className="py-16 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <AnimatedSection animation="fade">
+                        <div className="mb-16 text-center">
+                            <h2 className="text-3xl font-bold text-blue-900">
+                                Accommodation Options
+                            </h2>
+                            <div className="w-24 h-1 bg-orange-500 mx-auto mt-4"></div>
+                        </div>
+                    </AnimatedSection>
+
+                    <div className="grid md:grid-cols-3 gap-8">
+                        <AnimatedSection animation="slideUp" delay={0.2}>
+                            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                                <div className="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                                    <svg className="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                    </svg>
+                                </div>
+                                <div className="p-6">
+                                    <h3 className="text-xl font-bold text-blue-900 mb-2">University Halls</h3>
+                                    <p className="text-gray-600 mb-4">
+                                        On-campus accommodation provides a convenient and social living experience. Includes furnished rooms, meal plans, and various amenities. Perfect for first-year students to integrate into campus life.
+                                    </p>
+                                    <ul className="space-y-2 text-sm text-gray-600">
+                                        <li className="flex items-start">
+                                            <ChevronRight className="w-4 h-4 text-orange-500 mt-1 mr-2 flex-shrink-0" />
+                                            <span>All utilities included</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <ChevronRight className="w-4 h-4 text-orange-500 mt-1 mr-2 flex-shrink-0" />
+                                            <span>Close to classes and facilities</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <ChevronRight className="w-4 h-4 text-orange-500 mt-1 mr-2 flex-shrink-0" />
+                                            <span>Built-in social community</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </AnimatedSection>
+
+                        <AnimatedSection animation="slideUp" delay={0.3}>
+                            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                                <div className="h-48 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                                    <svg className="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                    </svg>
+                                </div>
+                                <div className="p-6">
+                                    <h3 className="text-xl font-bold text-blue-900 mb-2">Homestay</h3>
+                                    <p className="text-gray-600 mb-4">
+                                        Live with a local Kiwi family to immerse yourself in the culture and improve your English. Experience authentic New Zealand lifestyle while enjoying a supportive home environment.
+                                    </p>
+                                    <ul className="space-y-2 text-sm text-gray-600">
+                                        <li className="flex items-start">
+                                            <ChevronRight className="w-4 h-4 text-orange-500 mt-1 mr-2 flex-shrink-0" />
+                                            <span>Meals provided</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <ChevronRight className="w-4 h-4 text-orange-500 mt-1 mr-2 flex-shrink-0" />
+                                            <span>Cultural immersion</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <ChevronRight className="w-4 h-4 text-orange-500 mt-1 mr-2 flex-shrink-0" />
+                                            <span>English practice daily</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </AnimatedSection>
+
+                        <AnimatedSection animation="slideUp" delay={0.4}>
+                            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                                <div className="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                                    <svg className="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    </svg>
+                                </div>
+                                <div className="p-6">
+                                    <h3 className="text-xl font-bold text-blue-900 mb-2">Shared Apartments</h3>
+                                    <p className="text-gray-600 mb-4">
+                                        Rent an apartment with other students for more independence and flexibility. Share living costs while maintaining your own private space. Great for those seeking autonomy.
+                                    </p>
+                                    <ul className="space-y-2 text-sm text-gray-600">
+                                        <li className="flex items-start">
+                                            <ChevronRight className="w-4 h-4 text-orange-500 mt-1 mr-2 flex-shrink-0" />
+                                            <span>More independence</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <ChevronRight className="w-4 h-4 text-orange-500 mt-1 mr-2 flex-shrink-0" />
+                                            <span>Shared costs</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <ChevronRight className="w-4 h-4 text-orange-500 mt-1 mr-2 flex-shrink-0" />
+                                            <span>Flexible lease terms</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </AnimatedSection>
+                    </div>
+                </div>
+            </section>
+
+            {/* Food Section */}
+            <section id="eats" className="py-16 bg-white">
+                <div className="container mx-auto px-4">
+                    <AnimatedSection animation="fade">
+                        <div className="text-center mb-16">
+                            <h2 className="text-4xl font-bold text-blue-900 mb-4">
+                                New Zealand Cuisine
+                            </h2>
+                            <div className="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
+                            <p className="text-gray-600 max-w-2xl mx-auto">
+                                Experience a diverse culinary scene that celebrates fresh, local ingredients and multicultural influences. From traditional Māori hangi to world-class wines and modern fusion cuisine.
+                            </p>
+                        </div>
+                    </AnimatedSection>
+
+                    <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                        <AnimatedSection animation="slideRight" delay={0.2}>
+                            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 shadow-lg">
+                                <div className="flex items-center mb-6">
+                                    <div className="bg-blue-500 rounded-full p-4 mr-4">
+                                        <UtensilsCrossed className="w-8 h-8 text-white" />
+                                    </div>
+                                    <h3 className="text-2xl font-bold text-blue-900">Local Specialties</h3>
+                                </div>
+                                <ul className="space-y-3 text-gray-700">
+                                    <li className="flex items-start">
+                                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span><strong>Fish & Chips:</strong> A Kiwi favorite - fresh fish with crispy fries</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span><strong>Pavlova:</strong> Iconic meringue dessert topped with fruit</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span><strong>Meat Pies:</strong> Perfect comfort food for any occasion</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span><strong>Lamb:</strong> New Zealand's premium export product</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </AnimatedSection>
+
+                        <AnimatedSection animation="slideLeft" delay={0.3}>
+                            <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-8 shadow-lg">
+                                <div className="flex items-center mb-6">
+                                    <div className="bg-orange-500 rounded-full p-4 mr-4">
+                                        <Home className="w-8 h-8 text-white" />
+                                    </div>
+                                    <h3 className="text-2xl font-bold text-blue-900">Dining Culture</h3>
+                                </div>
+                                <ul className="space-y-3 text-gray-700">
+                                    <li className="flex items-start">
+                                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span><strong>Cafés:</strong> World-renowned coffee culture</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span><strong>Farmers Markets:</strong> Fresh local produce weekly</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span><strong>Asian Cuisine:</strong> Diverse and authentic options</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <span><strong>Wine Regions:</strong> World-class vineyards to explore</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </AnimatedSection>
+                    </div>
+
+                    <AnimatedSection animation="slideUp" delay={0.4}>
+                        <div className="mt-12 text-center bg-blue-50 rounded-xl p-8 max-w-4xl mx-auto">
+                            <h4 className="text-xl font-bold text-blue-900 mb-4">Ready to Start Your New Zealand Journey?</h4>
+                            <p className="text-gray-600 mb-6">
+                                Discover more about studying and living in New Zealand. Our team is here to help you every step of the way.
+                            </p>
+                            <button className="bg-orange-500 text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition-colors inline-flex items-center">
+                                Get Free Consultation
+                                <ChevronRight className="ml-2" />
+                            </button>
+                        </div>
+                    </AnimatedSection>
+                </div>
+            </section>
+
+            {/* Floating Navigation */}
+            <div className="fixed bottom-8 right-8 z-50">
+                <FloatingSectionNav sections={sections} />
+            </div>
+        </div>
+    );
+};
 
 // Default export for backward compatibility
 export const NZLife = NZLifeCN;
