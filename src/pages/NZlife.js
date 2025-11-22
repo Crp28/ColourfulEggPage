@@ -258,7 +258,7 @@ export const Cities = () => {
     );
 }
 
-export const NZLife = () => {
+export const NZLifeCN = () => {
     // Define sections for the floating navigation
     const location = useLocation;
     const sections = [
@@ -795,3 +795,9 @@ export const NZLife = () => {
         </div>
     );
 };
+
+// English version
+export const NZLifeEN = NZLifeCN;
+
+// Default export for backward compatibility
+export const NZLife = NZLifeCN;

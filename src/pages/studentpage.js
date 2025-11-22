@@ -260,7 +260,7 @@ const TimelineCard = ({ title, content, isHighlighted = false, className = "" })
 
 // pages
 
-export const ColourfulStudy = () => {
+export const ColourfulStudyCN = () => {
     // sections used by the sidebar
     const sections = [
         { id: "CStop", label: "回顶部" },
@@ -733,7 +733,7 @@ export const ColourfulStudy = () => {
 
 
 
-export const PriSecStudy = () => {
+export const PriSecStudyCN = () => {
     // 中小学留学
     const [showNav, setShowNav] = useState(false);
     const navigate = useNavigate();
@@ -1177,7 +1177,7 @@ export const PriSecStudy = () => {
 
 
 
-export const FoundationStudy = () => {
+export const FoundationStudyCN = () => {
     return (
         <div className="pt-20 bg-gradient-to-b from-gray-50 to-white">
             <div className="container mx-auto">
@@ -1380,7 +1380,7 @@ export const FoundationStudy = () => {
     );
 };
 
-export const BachelorStudy = () => {
+export const BachelorStudyCN = () => {
     // （目标）本科留学 -- 包括现高中生上预科 + 直升大学）
 
     const [showNav, setShowNav] = useState(false);
@@ -1821,3 +1821,14 @@ export const DoctoralStudy = () => {
 export const PostUni = () => {
 
 }
+// English versions (aliases for now - to be translated)
+export const ColourfulStudyEN = ColourfulStudyCN;
+export const PriSecStudyEN = PriSecStudyCN;
+export const FoundationStudyEN = FoundationStudyCN;
+export const BachelorStudyEN = BachelorStudyCN;
+
+// Backward compatibility exports
+export const ColourfulStudy = ColourfulStudyCN;
+export const PriSecStudy = PriSecStudyCN;
+export const FoundationStudy = FoundationStudyCN;
+export const BachelorStudy = BachelorStudyCN;

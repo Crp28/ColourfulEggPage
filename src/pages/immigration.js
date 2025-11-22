@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Immigration = () => {
+const ImmigrationCN = () => {
     const [activeSection, setActiveSection] = useState('');
 
     // Track active section based on scroll position
@@ -1709,4 +1709,8 @@ const Immigration = () => {
     );
 };
 
+export const ImmigrationEN = ImmigrationCN;
+
+// Backward compatibility
+export const Immigration = ImmigrationCN;
 export default Immigration;
