@@ -1,5 +1,5 @@
-import { Routes, Route, Link, BrowserRouter as Router, Navigate, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { Routes, Route, BrowserRouter as Router, Navigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import "./App.css"
 import { HomePageZH, HomePageEN } from "./pages/home";
 import { Nav, NavEN } from "./pages/nav_bar";
@@ -26,9 +26,14 @@ function App() {
   useEffect(() => {
     document.title = "纽蛋留学"
   })
+  
+  // Use basename only in production (when PUBLIC_URL is set)
+  // In development, PUBLIC_URL will be empty string
+  const basename = process.env.NODE_ENV === 'production' ? process.env.PUBLIC_URL : '';
+  
   return (
 
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename={basename}>
       <ScrollToTop />
       <div className="App d-flex flex-column min-vh-100">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
