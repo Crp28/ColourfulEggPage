@@ -41,7 +41,7 @@ export const Cities = () => {
             id: 1,
             name: '奥克兰',
             englishName: 'Auckland',
-            image: '/Auckland.jpg', // Replace with actual image path
+            image: `${process.env.PUBLIC_URL}/Auckland.jpg`, // Replace with actual image path
             description: '奥克兰是新西兰最大的城市，拥有超过160万人口。这座城市横跨两个港口，以其美丽的海滩、多元文化和高质量的生活而闻名于世。奥克兰大学、奥克兰理工大学等知名高校坐落于此，也是新西兰华人最多的城市。是留学生的热门选择。'
         },
         {
@@ -62,7 +62,7 @@ export const Cities = () => {
             id: 4,
             name: '汉密尔顿',
             englishName: 'Hamilton',
-            image: '/Hamilton.jpg', // Replace with actual image path
+            image: `${process.env.PUBLIC_URL}/Hamilton.jpg`, // Replace with actual image path
             description: '汉密尔顿位于北岛的怀卡托地区，是新西兰增长最快的城市之一。怀卡托河流经城市，为城市增添了自然美景。怀卡托大学提供高质量的教育，尤其在农业、管理和教育领域享有很高声誉。'
         }
     ];
@@ -300,7 +300,7 @@ export const NZLife = () => {
         <div className="min-h-screen bg-gray-50 pt-20">
             {/* Hero Section */}
             <section id="top" className="relative bg-blue-900 overflow-hidden" style={{ height: 'calc(100vh - 5rem)' }}>
-                <img src="/NZLifeEgg.png" alt="EggLogo" className="absolute right-0 md:h-48 h-32" />
+                <img src={`${process.env.PUBLIC_URL}/NZLifeEgg.png`} alt="EggLogo" className="absolute right-0 md:h-48 h-32" />
                 <div className="absolute inset-0">
                     <img
                         src="/api/placeholder/1600/900"

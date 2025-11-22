@@ -593,7 +593,7 @@ export const ColourfulStudy = () => {
                             <AnimatedSection
                                 animation="fade"
                             >
-                                <img src="/Timeline.png" alt="timeline" className="mx-auto size-2/3"></img>
+                                <img src={`${process.env.PUBLIC_URL}/Timeline.png`} alt="timeline" className="mx-auto size-2/3"></img>
                             </AnimatedSection>
                         </div>
                     </div>
@@ -638,19 +638,19 @@ export const ColourfulStudy = () => {
                                 {
                                     name: "Student A",
                                     program: "本科 - X专业",
-                                    image: "/student1.jpg",
+                                    image: `${process.env.PUBLIC_URL}/student1.jpg`,
                                     testimonial: "Placeholder"
                                 },
                                 {
                                     name: "Student B",
                                     program: "研究生 - Y专业",
-                                    image: "/student2.jpg",
+                                    image: `${process.env.PUBLIC_URL}/student2.jpg`,
                                     testimonial: "Placeholder"
                                 },
                                 {
                                     name: "Student C",
                                     program: "中学 - Year 9",
-                                    image: "/student3.jpg",
+                                    image: `${process.env.PUBLIC_URL}/student3.jpg`,
                                     testimonial: "Placeholder"
                                 }
                             ].map((student, index) => (
@@ -851,15 +851,15 @@ export const PriSecStudy = () => {
                     <div className="max-w-5xl mx-auto mt-20 px-4">
                         <div className="grid grid-cols-3 gap-8">
                             <AnimatedSection animation="slideRight" delay={0.2}>
-                                <img src="/NCEA.png" alt="NCEA"></img>
+                                <img src={`${process.env.PUBLIC_URL}/NCEA.png`} alt="NCEA"></img>
                             </AnimatedSection>
 
                             <AnimatedSection animation="slideRight" delay={0.3}>
-                                <img src="/CIE.png" alt="CIE" ></img>
+                                <img src={`${process.env.PUBLIC_URL}/CIE.png`} alt="CIE" ></img>
                             </AnimatedSection>
 
                             <AnimatedSection animation="slideRight" delay={0.4}>
-                                <img src="/IB.png" alt="IB" ></img>
+                                <img src={`${process.env.PUBLIC_URL}/IB.png`} alt="IB" ></img>
                             </AnimatedSection>
                         </div>
                         <div className='text-center mt-10 text-2xl'>选择心仪的学习体系。所有课程为全球公认的资格证书，高中毕业后可进入全球名校！</div>
@@ -1508,7 +1508,7 @@ export const BachelorStudy = () => {
                     {/* Campus Background */}
                     <div ref={campusRef} className="absolute inset-0 opacity-0">
                         <img
-                            src="/UniBackground.jpeg"
+                            src={`${process.env.PUBLIC_URL}/UniBackground.jpeg`}
                             alt="Campus Interior"
                             className="w-full h-full object-cover"
                         />
@@ -1561,12 +1561,12 @@ export const BachelorStudy = () => {
                             <p className="text-gray-700 leading-relaxed">
                                 根据个人情况，您可以直接升入大学，或在大学指定的预科学校学习从而为大学做好准备。
                             </p>
-                            <img src="/bluedivider.svg" alt="divider" className='md:mb-20' />
+                            <img src={`${process.env.PUBLIC_URL}/bluedivider.svg`} alt="divider" className='md:mb-20' />
                         </div>
                         <h2 className="text-3xl font-bold text-blue-900 md:mb-6 ml-36">
                             新西兰升学路径
                         </h2>
-                        <img src="/bachelorPathway.png" alt="Bachelor Pathway" className="mx-auto md:max-w-max max-w-sm" />
+                        <img src={`${process.env.PUBLIC_URL}/bachelorPathway.png`} alt="Bachelor Pathway" className="mx-auto md:max-w-max max-w-sm" />
                         {/* dialog box */}
                         <div className="pointer-events-auto hover:cursor-pointer" onClick={() => { navigate(`${getLang(location)}/colourfulstudy/FoundationStudy`) }}>
                             <div className="absolute md:bottom-20 md:right-48 bottom-5 right-24 bg-white shadow-lg rounded-xl">
@@ -1578,7 +1578,7 @@ export const BachelorStudy = () => {
                                 </div>
                             </div>
                             <div className="absolute bottom-4 right-4">
-                                <img src="/QuestionEgg.gif" alt="Foundation Navigator" className="md:h-48 h-20" />
+                                <img src={`${process.env.PUBLIC_URL}/QuestionEgg.gif`} alt="Foundation Navigator" className="md:h-48 h-20" />
                             </div>
                         </div>
                     </div>
@@ -1590,7 +1590,7 @@ export const BachelorStudy = () => {
                         <div className="mb-16">
                             <UniversityBook />
                         </div>
-                        <img src="/QSCompare.png" alt="ranking" className="md:w-2/3 mx-auto mb-16" />
+                        <img src={`${process.env.PUBLIC_URL}/QSCompare.png`} alt="ranking" className="md:w-2/3 mx-auto mb-16" />
                         <div className="flex flex-wrap gap-16 max-w-6xl mx-auto">
                             <div className="flex-[2]">
                                 <AnimatedSection animation="slideUp" delay={0.1}>

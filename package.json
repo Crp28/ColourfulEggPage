@@ -2,6 +2,7 @@
   "name": "web",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/ColourfulEggPage",
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "cra-template": "1.2.0",

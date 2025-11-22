@@ -70,7 +70,7 @@ const Footer = () => {
                             <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300"
                                 style={{ opacity: showQR ? 0 : 1 }}>
                                 <img
-                                    src="/Wechat1.svg"
+                                    src={`${process.env.PUBLIC_URL}/Wechat1.svg`}
                                     alt="WeChat Icon"
                                     className="h-20 w-20 object-contain hover:scale-105 transition-transform"
                                 />
@@ -78,7 +78,7 @@ const Footer = () => {
                             <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300"
                                 style={{ opacity: showQR ? 1 : 0 }}>
                                 <img
-                                    src="/QR.jpg"
+                                    src={`${process.env.PUBLIC_URL}/QR.jpg`}
                                     alt="QR Code"
                                     className="h-24 w-24 object-contain"
                                 />

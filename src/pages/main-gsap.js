@@ -14,17 +14,17 @@ const ImageSlider = () => {
     const slides = [
         {
             id: 1,
-            image: 'Nzpic1.jpg',
+            image: `${process.env.PUBLIC_URL}/Nzpic1.jpg`,
             alt: 'New Zealand Scene 1'
         },
         {
             id: 2,
-            image: 'Nzpic2.jpg',
+            image: `${process.env.PUBLIC_URL}/Nzpic2.jpg`,
             alt: 'New Zealand Scene 2'
         },
         {
             id: 3,
-            image: 'Nzpic3.jpg',
+            image: `${process.env.PUBLIC_URL}/Nzpic3.jpg`,
             alt: 'New Zealand Scene 3'
         },
         {
@@ -236,7 +236,7 @@ const HomePage = () => {
                         <div className="relative p-6">
                             {/* Egg Circle */}
                             <div className="absolute -top-48 -left-48 w-160 h-160 flex items-center justify-center">
-                                <img alt='QuestionEgg' src='QuestionEgg.gif' className="w-128 h-128" />
+                                <img alt='QuestionEgg' src={`${process.env.PUBLIC_URL}/QuestionEgg.gif`} className="w-128 h-128" />
                             </div>
 
                             {/* Content Grid */}
@@ -307,7 +307,7 @@ const HomePage = () => {
                 <section className="relative h-screen">
                     <div className="absolute inset-0">
                         <img
-                            src="home_bg.jpg"
+                            src={`${process.env.PUBLIC_URL}/home_bg.jpg`}
                             alt="New Zealand Landscape"
                             className="w-full h-full object-cover"
                         />
