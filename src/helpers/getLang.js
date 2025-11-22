@@ -1,12 +1,7 @@
 export const getLang = (location) => {
-    // Remove the base path if present (for GitHub Pages subdirectory deploys)
-    const base = process.env.PUBLIC_URL || '';
-    let pathname = location.pathname.startsWith(base)
-        ? location.pathname.slice(base.length)
-        : location.pathname;
     let language;
-    if (pathname.startsWith('/zh')) language = '/zh';
-    else if (pathname.startsWith('/en')) language = '/en';
-    else language = '/zh';
-    return language;
+    if (location.pathname.slice(0, 3) === "/zh") language = "/zh"
+    else if (location.pathname.slice(0, 3) === "/en") language = "/en"
+    else language = "/zh"
+    return language
 }

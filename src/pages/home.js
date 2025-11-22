@@ -11,17 +11,17 @@ const ImageSlider = () => {
     const slides = [
         {
             id: 1,
-            image: './Nzpic1.jpg',
+            image: 'Nzpic1.jpg',
             alt: 'New Zealand Scene 1'
         },
         {
             id: 2,
-            image: './Nzpic2.jpg',
+            image: 'Nzpic2.jpg',
             alt: 'New Zealand Scene 2'
         },
         {
             id: 3,
-            image: './Nzpic3.jpg',
+            image: 'Nzpic3.jpg',
             alt: 'New Zealand Scene 3'
         },
         {
@@ -168,7 +168,7 @@ export const HomePageZH = () => {
                         <div className="relative p-6">
                             {/* Egg Circle */}
                             <div className="absolute -top-48 -left-48 w-160 h-160 flex items-center justify-center">
-                                <img alt='QuestionEgg' src='./QuestionEgg.gif' className="md:w-128 md:h-128" />
+                                <img alt='QuestionEgg' src='QuestionEgg.gif' className="md:w-128 md:h-128" />
                             </div>
 
                             {/* Content Grid */}
@@ -241,7 +241,7 @@ export const HomePageZH = () => {
                     {/* Background Image and Overlay */}
                     <div className="absolute inset-0">
                         <img
-                            src="./home_bg.jpg"
+                            src="home_bg.jpg"
                             alt="New Zealand Landscape"
                             className="w-full h-full object-cover"
                         />
@@ -254,7 +254,7 @@ export const HomePageZH = () => {
                             <div className="flex items-center h-full">
                                 <div className="max-w-2xl text-white">
                                     <h1 className="text-5xl font-bold mb-6">您的新西兰生活由此开始</h1>
-                                    <p className="text-xl mb-8">奥克兰，新西兰</p>
+                                    <p className="text-xl mb-8">Placeholder text.</p>
                                     <button className="inline-flex items-center bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors">
                                         Learn More
                                         <ChevronRight className="ml-2" />
@@ -310,7 +310,7 @@ export const HomePageZH = () => {
                             >
                                 <div className="transform hover:scale-105 transition-transform duration-300 max-w-72">
                                     <img
-                                        src="./TeamLeader.jpg"
+                                        src="TeamLeader.jpg"
                                         alt={`Leader`}
                                         className="w-full rounded-full shadow-lg"
                                     />
@@ -373,7 +373,7 @@ export const HomePageZH = () => {
                         <div className="container mx-auto px-4 text-center relative z-10">
                             <div className="max-w-3xl mx-auto">
                                 <img
-                                    src="./OriginalEgg.gif"
+                                    src="OriginalEgg.gif"
                                     alt="Colourful Egg Education Logo"
                                     className="mx-auto mb-2 h-60 object-contain"
                                 />

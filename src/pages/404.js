@@ -20,7 +20,7 @@ const NotFound = () => {
                         <div className="absolute inset-0 flex items-center justify-center">
                             {/* Your logo or a cute egg illustration could go here */}
                             <img
-                                src="./QuestionEgg.gif"
+                                src="/QuestionEgg.gif"
                                 alt="Confused Egg"
                                 className="h-36 w-36 object-contain"
                             />
@@ -45,7 +45,7 @@ const NotFound = () => {
                             返回上一页
                         </button>
                         <button
-                            onClick={() => navigate('')}
+                            onClick={() => navigate('/')}
                             className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
                         >
                             <Home className="mr-2 h-5 w-5" />
