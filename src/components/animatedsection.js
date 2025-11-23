@@ -24,7 +24,7 @@ const useInView = (options = {}) => {
                 observer.unobserve(currentRef);
             }
         };
-    }, [options.threshold]);
+    }, [options.threshold, hasAnimated]);
 
     return [elementRef, isVisible];
 };

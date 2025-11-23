@@ -20,7 +20,7 @@ const NotFound = () => {
                         <div className="absolute inset-0 flex items-center justify-center">
                             {/* Your logo or a cute egg illustration could go here */}
                             <img
-                                src="/QuestionEgg.gif"
+                                src={`${process.env.PUBLIC_URL}/QuestionEgg.gif`}
                                 alt="Confused Egg"
                                 className="h-36 w-36 object-contain"
                             />

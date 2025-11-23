@@ -260,7 +260,7 @@ const TimelineCard = ({ title, content, isHighlighted = false, className = "" })
 
 // pages
 
-export const ColourfulStudy = () => {
+export const ColourfulStudyCN = () => {
     // sections used by the sidebar
     const sections = [
         { id: "CStop", label: "回顶部" },
@@ -281,7 +281,7 @@ export const ColourfulStudy = () => {
             <div
                 className="absolute inset-0 opacity-0"
                 style={{
-                    backgroundImage: `url('/Lincoln.jpg')`,
+                    backgroundImage: `url('${process.env.PUBLIC_URL}/Lincoln.jpg')`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     animation: 'fadeIn 1s ease-out forwards'
@@ -593,7 +593,7 @@ export const ColourfulStudy = () => {
                             <AnimatedSection
                                 animation="fade"
                             >
-                                <img src="/Timeline.png" alt="timeline" className="mx-auto size-2/3"></img>
+                                <img src={`${process.env.PUBLIC_URL}/Timeline.png`} alt="timeline" className="mx-auto size-2/3"></img>
                             </AnimatedSection>
                         </div>
                     </div>
@@ -638,19 +638,19 @@ export const ColourfulStudy = () => {
                                 {
                                     name: "Student A",
                                     program: "本科 - X专业",
-                                    image: "/student1.jpg",
+                                    image: `${process.env.PUBLIC_URL}/student1.jpg`,
                                     testimonial: "Placeholder"
                                 },
                                 {
                                     name: "Student B",
                                     program: "研究生 - Y专业",
-                                    image: "/student2.jpg",
+                                    image: `${process.env.PUBLIC_URL}/student2.jpg`,
                                     testimonial: "Placeholder"
                                 },
                                 {
                                     name: "Student C",
                                     program: "中学 - Year 9",
-                                    image: "/student3.jpg",
+                                    image: `${process.env.PUBLIC_URL}/student3.jpg`,
                                     testimonial: "Placeholder"
                                 }
                             ].map((student, index) => (
@@ -733,7 +733,7 @@ export const ColourfulStudy = () => {
 
 
 
-export const PriSecStudy = () => {
+export const PriSecStudyCN = () => {
     // 中小学留学
     const [showNav, setShowNav] = useState(false);
     const navigate = useNavigate();
@@ -851,15 +851,15 @@ export const PriSecStudy = () => {
                     <div className="max-w-5xl mx-auto mt-20 px-4">
                         <div className="grid grid-cols-3 gap-8">
                             <AnimatedSection animation="slideRight" delay={0.2}>
-                                <img src="/NCEA.png" alt="NCEA"></img>
+                                <img src={`${process.env.PUBLIC_URL}/NCEA.png`} alt="NCEA"></img>
                             </AnimatedSection>
 
                             <AnimatedSection animation="slideRight" delay={0.3}>
-                                <img src="/CIE.png" alt="CIE" ></img>
+                                <img src={`${process.env.PUBLIC_URL}/CIE.png`} alt="CIE" ></img>
                             </AnimatedSection>
 
                             <AnimatedSection animation="slideRight" delay={0.4}>
-                                <img src="/IB.png" alt="IB" ></img>
+                                <img src={`${process.env.PUBLIC_URL}/IB.png`} alt="IB" ></img>
                             </AnimatedSection>
                         </div>
                         <div className='text-center mt-10 text-2xl'>选择心仪的学习体系。所有课程为全球公认的资格证书，高中毕业后可进入全球名校！</div>
@@ -1177,7 +1177,7 @@ export const PriSecStudy = () => {
 
 
 
-export const FoundationStudy = () => {
+export const FoundationStudyCN = () => {
     return (
         <div className="pt-20 bg-gradient-to-b from-gray-50 to-white">
             <div className="container mx-auto">
@@ -1380,7 +1380,7 @@ export const FoundationStudy = () => {
     );
 };
 
-export const BachelorStudy = () => {
+export const BachelorStudyCN = () => {
     // （目标）本科留学 -- 包括现高中生上预科 + 直升大学）
 
     const [showNav, setShowNav] = useState(false);
@@ -1508,7 +1508,7 @@ export const BachelorStudy = () => {
                     {/* Campus Background */}
                     <div ref={campusRef} className="absolute inset-0 opacity-0">
                         <img
-                            src="/UniBackground.jpeg"
+                            src={`${process.env.PUBLIC_URL}/UniBackground.jpeg`}
                             alt="Campus Interior"
                             className="w-full h-full object-cover"
                         />
@@ -1561,12 +1561,12 @@ export const BachelorStudy = () => {
                             <p className="text-gray-700 leading-relaxed">
                                 根据个人情况，您可以直接升入大学，或在大学指定的预科学校学习从而为大学做好准备。
                             </p>
-                            <img src="/bluedivider.svg" alt="divider" className='md:mb-20' />
+                            <img src={`${process.env.PUBLIC_URL}/bluedivider.svg`} alt="divider" className='md:mb-20' />
                         </div>
                         <h2 className="text-3xl font-bold text-blue-900 md:mb-6 ml-36">
                             新西兰升学路径
                         </h2>
-                        <img src="/bachelorPathway.png" alt="Bachelor Pathway" className="mx-auto md:max-w-max max-w-sm" />
+                        <img src={`${process.env.PUBLIC_URL}/bachelorPathway.png`} alt="Bachelor Pathway" className="mx-auto md:max-w-max max-w-sm" />
                         {/* dialog box */}
                         <div className="pointer-events-auto hover:cursor-pointer" onClick={() => { navigate(`${getLang(location)}/colourfulstudy/FoundationStudy`) }}>
                             <div className="absolute md:bottom-20 md:right-48 bottom-5 right-24 bg-white shadow-lg rounded-xl">
@@ -1578,7 +1578,7 @@ export const BachelorStudy = () => {
                                 </div>
                             </div>
                             <div className="absolute bottom-4 right-4">
-                                <img src="/QuestionEgg.gif" alt="Foundation Navigator" className="md:h-48 h-20" />
+                                <img src={`${process.env.PUBLIC_URL}/QuestionEgg.gif`} alt="Foundation Navigator" className="md:h-48 h-20" />
                             </div>
                         </div>
                     </div>
@@ -1590,7 +1590,7 @@ export const BachelorStudy = () => {
                         <div className="mb-16">
                             <UniversityBook />
                         </div>
-                        <img src="/QSCompare.png" alt="ranking" className="md:w-2/3 mx-auto mb-16" />
+                        <img src={`${process.env.PUBLIC_URL}/QSCompare.png`} alt="ranking" className="md:w-2/3 mx-auto mb-16" />
                         <div className="flex flex-wrap gap-16 max-w-6xl mx-auto">
                             <div className="flex-[2]">
                                 <AnimatedSection animation="slideUp" delay={0.1}>
@@ -1821,3 +1821,114 @@ export const DoctoralStudy = () => {
 export const PostUni = () => {
 
 }
+
+// English template versions with key headings translated
+// These are simplified templates - detailed content to be added based on CN versions
+
+export const ColourfulStudyEN = () => {
+    return (
+        <div className="min-h-screen bg-white pt-20">
+            <div className="container mx-auto px-4 py-8">
+                <h1 className="text-4xl font-bold text-blue-900 mb-8">Study Abroad in New Zealand</h1>
+                
+                <div className="bg-blue-50 p-6 rounded-lg mb-8">
+                    <p className="text-gray-700 text-lg">
+                        <strong>Template Note:</strong> This is a template page. Content to be added covering:
+                    </p>
+                    <ul className="list-disc list-inside text-gray-700 mt-4 space-y-2">
+                        <li>Overview of New Zealand education system</li>
+                        <li>Primary and secondary education options</li>
+                        <li>Tertiary education (Bachelor's, Master's, PhD)</li>
+                        <li>Foundation and pathway programs</li>
+                        <li>Application process and requirements</li>
+                        <li>Student visa information</li>
+                        <li>Cost of living and tuition fees</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export const PriSecStudyEN = () => {
+    return (
+        <div className="min-h-screen bg-white pt-20">
+            <div className="container mx-auto px-4 py-8">
+                <h1 className="text-4xl font-bold text-blue-900 mb-8">Primary & Secondary Education</h1>
+                
+                <div className="bg-blue-50 p-6 rounded-lg mb-8">
+                    <p className="text-gray-700 text-lg">
+                        <strong>Template Note:</strong> This is a template page. Content to be added covering:
+                    </p>
+                    <ul className="list-disc list-inside text-gray-700 mt-4 space-y-2">
+                        <li>New Zealand school system overview</li>
+                        <li>Year levels and curriculum (NCEA, CIE, IB)</li>
+                        <li>School types (state, integrated, private)</li>
+                        <li>Application process for international students</li>
+                        <li>Accommodation options (homestay, boarding)</li>
+                        <li>Extracurricular activities and school life</li>
+                        <li>Pathway to university</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export const FoundationStudyEN = () => {
+    return (
+        <div className="min-h-screen bg-white pt-20">
+            <div className="container mx-auto px-4 py-8">
+                <h1 className="text-4xl font-bold text-blue-900 mb-8">Foundation Studies</h1>
+                
+                <div className="bg-blue-50 p-6 rounded-lg mb-8">
+                    <p className="text-gray-700 text-lg">
+                        <strong>Template Note:</strong> This is a template page. Content to be added covering:
+                    </p>
+                    <ul className="list-disc list-inside text-gray-700 mt-4 space-y-2">
+                        <li>What is a Foundation program?</li>
+                        <li>Benefits of Foundation studies</li>
+                        <li>Entry requirements</li>
+                        <li>Program duration and structure</li>
+                        <li>Available subjects and streams</li>
+                        <li>University partnerships and guaranteed pathways</li>
+                        <li>Application process and timeline</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export const BachelorStudyEN = () => {
+    return (
+        <div className="min-h-screen bg-white pt-20">
+            <div className="container mx-auto px-4 py-8">
+                <h1 className="text-4xl font-bold text-blue-900 mb-8">Bachelor's Degree Studies</h1>
+                
+                <div className="bg-blue-50 p-6 rounded-lg mb-8">
+                    <p className="text-gray-700 text-lg">
+                        <strong>Template Note:</strong> This is a template page. Content to be added covering:
+                    </p>
+                    <ul className="list-disc list-inside text-gray-700 mt-4 space-y-2">
+                        <li>New Zealand university system overview</li>
+                        <li>All 8 universities and their rankings</li>
+                        <li>Popular programs and majors</li>
+                        <li>Entry requirements (academic and English)</li>
+                        <li>Direct entry vs Foundation/Diploma pathways</li>
+                        <li>Application process and deadlines</li>
+                        <li>Tuition fees and scholarships</li>
+                        <li>Post-study work visa options</li>
+                        <li>Pathway to permanent residence</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+// Backward compatibility exports
+export const ColourfulStudy = ColourfulStudyCN;
+export const PriSecStudy = PriSecStudyCN;
+export const FoundationStudy = FoundationStudyCN;
+export const BachelorStudy = BachelorStudyCN;

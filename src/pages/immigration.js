@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Immigration = () => {
+const ImmigrationCN = () => {
     const [activeSection, setActiveSection] = useState('');
 
     // Track active section based on scroll position
@@ -63,7 +63,7 @@ const Immigration = () => {
                                 e.preventDefault();
                                 scrollToSection('technical-migration');
                             }}
-                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'technical-migration' ? 'text-blue-700 border-l-3 border-blue-500 pl-3' : ''
+                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'technical-migration' ? 'text-blue-700 border-l-4 border-blue-500 pl-3' : ''
                                 }`}
                         >
                             技术移民
@@ -132,7 +132,7 @@ const Immigration = () => {
                                 e.preventDefault();
                                 scrollToSection('investment-migration');
                             }}
-                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'investment-migration' ? 'text-blue-700 border-l-3 border-blue-500 pl-3' : ''
+                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'investment-migration' ? 'text-blue-700 border-l-4 border-blue-500 pl-3' : ''
                                 }`}
                         >
                             投资移民
@@ -145,7 +145,7 @@ const Immigration = () => {
                                 e.preventDefault();
                                 scrollToSection('entrepreneurship-migration');
                             }}
-                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'entrepreneurship-migration' ? 'text-blue-700 border-l-3 border-blue-500 pl-3' : ''
+                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'entrepreneurship-migration' ? 'text-blue-700 border-l-4 border-blue-500 pl-3' : ''
                                 }`}
                         >
                             创业移民
@@ -1709,4 +1709,321 @@ const Immigration = () => {
     );
 };
 
+// English version with template structure and key headings translated
+export const ImmigrationEN = () => {
+    const [activeSection, setActiveSection] = useState('');
+
+    // Track active section based on scroll position
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = [
+                'technical-migration',
+                'six-point-system',
+                'study-for-immigration',
+                'green-list',
+                'employer-sponsorship',
+                'investment-migration',
+                'entrepreneurship-migration'
+            ];
+
+            const scrollPosition = window.scrollY + 100;
+
+            for (const sectionId of sections) {
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    const { offsetTop, offsetHeight } = element;
+                    if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+                        setActiveSection(sectionId);
+                        break;
+                    }
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            const headerHeight = 100; // 80px header + 20px padding
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = window.pageYOffset + elementPosition - headerHeight;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    };
+
+    return (
+        <div className="min-h-screen flex bg-white pt-20">
+            {/* Sidebar - Wikipedia style with improved styling */}
+            <div className="w-1/5 p-4 rounded-r-none rounded-lg relative overflow-y-auto sticky top-20 self-start max-h-[calc(100vh-5rem)]">
+                <h2 className="text-xl font-bold mt-4 mb-6 text-blue-900 pb-3 border-b-2 border-gray-200">New Zealand Immigration</h2>
+
+                <ul className="text-gray-700 space-y-4">
+                    <li>
+                        <a
+                            href="#technical-migration"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                scrollToSection('technical-migration');
+                            }}
+                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'technical-migration' ? 'text-blue-700 border-l-4 border-blue-500 pl-3' : ''
+                                }`}
+                        >
+                            Skilled Migration
+                        </a>
+                        <ul className="pl-6 mt-3 space-y-2 border-l-2 border-gray-100">
+                            <li>
+                                <a
+                                    href="#six-point-system"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        scrollToSection('six-point-system');
+                                    }}
+                                    className={`block text-base hover:text-blue-700 transition-colors py-1 ${activeSection === 'six-point-system' ? 'text-blue-700 font-medium' : ''
+                                        }`}
+                                >
+                                    Six-Point Immigration Policy
+                                </a>
+                                <ul className="pl-6 mt-2 space-y-1 border-l border-gray-100">
+                                    <li>
+                                        <a
+                                            href="#study-for-immigration"
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                scrollToSection('study-for-immigration');
+                                            }}
+                                            className={`block text-sm hover:text-blue-700 transition-colors py-1 ${activeSection === 'study-for-immigration' ? 'text-blue-700 font-medium' : 'text-gray-600'
+                                                }`}
+                                        >
+                                            Study to Residence Pathway
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a
+                                    href="#green-list"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        scrollToSection('green-list');
+                                    }}
+                                    className={`block text-base hover:text-blue-700 transition-colors py-1 ${activeSection === 'green-list' ? 'text-blue-700 font-medium' : ''
+                                        }`}
+                                >
+                                    Green List Occupations
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#employer-sponsorship"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        scrollToSection('employer-sponsorship');
+                                    }}
+                                    className={`block text-base hover:text-blue-700 transition-colors py-1 ${activeSection === 'employer-sponsorship' ? 'text-blue-700 font-medium' : ''
+                                        }`}
+                                >
+                                    Employer Sponsorship
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a
+                            href="#investment-migration"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                scrollToSection('investment-migration');
+                            }}
+                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'investment-migration' ? 'text-blue-700 border-l-4 border-blue-500 pl-3' : ''
+                                }`}
+                        >
+                            Investment Migration
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#entrepreneurship-migration"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                scrollToSection('entrepreneurship-migration');
+                            }}
+                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'entrepreneurship-migration' ? 'text-blue-700 border-l-4 border-blue-500 pl-3' : ''
+                                }`}
+                        >
+                            Entrepreneur Migration
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            {/* Main Content */}
+            <div className="flex-1 max-w-5xl px-8 py-8">
+                {/* Technical Migration Section */}
+                <section className="mb-16">
+                    <h1 className="text-3xl font-bold text-blue-900 mb-6" id="technical-migration">Skilled Migration</h1>
+                    <div className="bg-blue-50 p-6 rounded-lg mb-8">
+                        <p className="text-gray-700 leading-relaxed">
+                            The New Zealand Skilled Migrant Category (SMC) is designed to attract global talent to address skill shortages and promote economic and social development. This program has no asset requirements and does not require investment or entrepreneurship, making it one of the most popular immigration pathways.
+                        </p>
+                    </div>
+
+                    {/* Six-Point System */}
+                    <div className="mb-12">
+                        <h2 className="text-3xl font-bold text-blue-800 mt-12 mb-6 pb-3 border-b-2 border-blue-200 relative" id="six-point-system">
+                            <span className="bg-blue-800 text-white px-4 py-2 rounded-lg mr-4 text-xl">01</span>
+                            Six-Point Immigration Policy
+                        </h2>
+
+                        <div className="bg-white border-l-4 border-blue-500 p-6 mb-6 shadow-sm">
+                            <h3 className="text-xl font-semibold text-blue-800 mb-4">Policy Overview</h3>
+                            <p className="text-gray-700 mb-4">
+                                On June 21, 2023, Immigration New Zealand announced a new skilled migration policy. The new 6-point system was officially implemented on October 9, 2023, completely replacing the previous 180-point system.
+                            </p>
+                            <p className="text-gray-700">
+                                <strong>Template Note:</strong> Detailed content about eligibility requirements, assessment criteria, and application process to be added here.
+                            </p>
+                        </div>
+
+                        {/* Study for Immigration Pathway */}
+                        <div className="mt-8">
+                            <h3 className="text-2xl font-semibold text-blue-700 mt-8 mb-4 flex items-center" id="study-for-immigration">
+                                <span className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-3 py-1 rounded-lg mr-3 text-sm">Recommended</span>
+                                Study to Residence Pathway
+                            </h3>
+                            <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-lg mb-6">
+                                <h4 className="text-lg font-semibold text-blue-800 mb-3">Systematic Study-Immigration Path</h4>
+                                <p className="text-gray-700">
+                                    <strong>Template Note:</strong> Details about the study-to-residence pathway, including:
+                                </p>
+                                <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                                    <li>NZQF (New Zealand Qualifications Framework) levels and immigration advantages</li>
+                                    <li>Optimal study programs for immigration (Masters, PhD, Bachelor's, Diplomas)</li>
+                                    <li>Popular immigration majors (Engineering, Healthcare, Education, IT, etc.)</li>
+                                    <li>Student rights during and after studies (work rights, post-study work visa)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        {/* Green List */}
+                        <div className="mt-8">
+                            <h2 className="text-3xl font-bold text-blue-800 mt-12 mb-6 pb-3 border-b-2 border-blue-200 relative" id="green-list">
+                                <span className="bg-green-600 text-white px-4 py-2 rounded-lg mr-4 text-xl">02</span>
+                                Green List Occupations
+                            </h2>
+                            <div className="bg-green-50 p-6 rounded-lg mb-6">
+                                <p className="text-gray-700">
+                                    <strong>Template Note:</strong> Information about Green List occupations including:
+                                </p>
+                                <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                                    <li>Fast Track (Straight to Residence) occupations</li>
+                                    <li>Work to Residence occupations</li>
+                                    <li>Eligibility criteria and requirements</li>
+                                    <li>Processing times and application procedures</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        {/* Employer Sponsorship */}
+                        <div className="mt-8">
+                            <h2 className="text-3xl font-bold text-blue-800 mt-12 mb-6 pb-3 border-b-2 border-blue-200 relative" id="employer-sponsorship">
+                                <span className="bg-blue-800 text-white px-4 py-2 rounded-lg mr-4 text-xl">03</span>
+                                Employer Sponsorship
+                            </h2>
+                            <div className="bg-blue-50 p-6 rounded-lg mb-6">
+                                <p className="text-gray-700">
+                                    <strong>Template Note:</strong> Details about employer-sponsored immigration including:
+                                </p>
+                                <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                                    <li>Accredited Employer Work Visa (AEWV) requirements</li>
+                                    <li>Employer accreditation process</li>
+                                    <li>Job check requirements</li>
+                                    <li>Pathway to residence</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Investment Migration Section */}
+                <section className="mb-16">
+                    <h1 className="text-3xl font-bold text-blue-900 mb-6" id="investment-migration">Investment Migration</h1>
+                    <div className="bg-blue-50 p-6 rounded-lg mb-8">
+                        <p className="text-gray-700">
+                            <strong>Template Note:</strong> Information about investment-based immigration options:
+                        </p>
+                        <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                            <li>Active Investor Plus Visa requirements</li>
+                            <li>Investment thresholds and criteria</li>
+                            <li>Application process and timelines</li>
+                            <li>Benefits and obligations</li>
+                        </ul>
+                    </div>
+                </section>
+
+                {/* Entrepreneurship Migration Section */}
+                <section className="mb-16">
+                    <h1 className="text-3xl font-bold text-blue-900 mb-6" id="entrepreneurship-migration">Entrepreneur Migration</h1>
+                    <div className="bg-blue-50 p-6 rounded-lg mb-8">
+                        <p className="text-gray-700">
+                            <strong>Template Note:</strong> Details about entrepreneur immigration including:
+                        </p>
+                        <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                            <li>Entrepreneur Work Visa requirements</li>
+                            <li>Business plan and investment requirements</li>
+                            <li>Entrepreneur Residence Visa criteria</li>
+                            <li>Job creation and export requirements</li>
+                        </ul>
+                    </div>
+                </section>
+
+                {/* Call to Action */}
+                <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg text-center mt-12">
+                    <h3 className="text-2xl font-bold mb-4">Ready to Start Your Immigration Journey?</h3>
+                    <p className="mb-6">
+                        Our experienced team can guide you through the entire immigration process.
+                    </p>
+                    <button className="bg-white text-blue-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Get Free Consultation
+                    </button>
+                </div>
+            </div>
+
+            {/* Custom scrollbar styles */}
+            <style>{`
+                .max-h-\[calc\(100vh-5rem\)\]::-webkit-scrollbar {
+                    width: 6px;
+                }
+                
+                .max-h-\[calc\(100vh-5rem\)\]::-webkit-scrollbar-track {
+                    background: #f1f1f1;
+                    border-radius: 10px;
+                }
+                
+                .max-h-\[calc\(100vh-5rem\)\]::-webkit-scrollbar-thumb {
+                    background: #cbd5e0;
+                    border-radius: 10px;
+                }
+                
+                .max-h-\[calc\(100vh-5rem\)\]::-webkit-scrollbar-thumb:hover {
+                    background: #a0aec0;
+                }
+                
+                html {
+                    scroll-behavior: smooth;
+                }
+            `}</style>
+        </div>
+    );
+};
+
+// Backward compatibility
+export const Immigration = ImmigrationCN;
 export default Immigration;
