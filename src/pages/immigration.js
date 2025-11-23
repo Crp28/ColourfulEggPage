@@ -63,7 +63,7 @@ const ImmigrationCN = () => {
                                 e.preventDefault();
                                 scrollToSection('technical-migration');
                             }}
-                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'technical-migration' ? 'text-blue-700 border-l-3 border-blue-500 pl-3' : ''
+                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'technical-migration' ? 'text-blue-700 border-l-4 border-blue-500 pl-3' : ''
                                 }`}
                         >
                             技术移民
@@ -132,7 +132,7 @@ const ImmigrationCN = () => {
                                 e.preventDefault();
                                 scrollToSection('investment-migration');
                             }}
-                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'investment-migration' ? 'text-blue-700 border-l-3 border-blue-500 pl-3' : ''
+                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'investment-migration' ? 'text-blue-700 border-l-4 border-blue-500 pl-3' : ''
                                 }`}
                         >
                             投资移民
@@ -145,7 +145,7 @@ const ImmigrationCN = () => {
                                 e.preventDefault();
                                 scrollToSection('entrepreneurship-migration');
                             }}
-                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'entrepreneurship-migration' ? 'text-blue-700 border-l-3 border-blue-500 pl-3' : ''
+                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'entrepreneurship-migration' ? 'text-blue-700 border-l-4 border-blue-500 pl-3' : ''
                                 }`}
                         >
                             创业移民
@@ -1773,7 +1773,7 @@ export const ImmigrationEN = () => {
                                 e.preventDefault();
                                 scrollToSection('technical-migration');
                             }}
-                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'technical-migration' ? 'text-blue-700 border-l-3 border-blue-500 pl-3' : ''
+                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'technical-migration' ? 'text-blue-700 border-l-4 border-blue-500 pl-3' : ''
                                 }`}
                         >
                             Skilled Migration
@@ -1842,7 +1842,7 @@ export const ImmigrationEN = () => {
                                 e.preventDefault();
                                 scrollToSection('investment-migration');
                             }}
-                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'investment-migration' ? 'text-blue-700 border-l-3 border-blue-500 pl-3' : ''
+                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'investment-migration' ? 'text-blue-700 border-l-4 border-blue-500 pl-3' : ''
                                 }`}
                         >
                             Investment Migration
@@ -1855,7 +1855,7 @@ export const ImmigrationEN = () => {
                                 e.preventDefault();
                                 scrollToSection('entrepreneurship-migration');
                             }}
-                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'entrepreneurship-migration' ? 'text-blue-700 border-l-3 border-blue-500 pl-3' : ''
+                            className={`block text-lg font-semibold hover:text-blue-700 transition-colors py-1 ${activeSection === 'entrepreneurship-migration' ? 'text-blue-700 border-l-4 border-blue-500 pl-3' : ''
                                 }`}
                         >
                             Entrepreneur Migration
