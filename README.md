@@ -63,7 +63,32 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project is configured to deploy automatically to GitHub Pages when changes are pushed to the `master` branch.
+
+#### Automatic Deployment
+
+The deployment is handled by a GitHub Actions workflow (`.github/workflows/deploy.yml`) that:
+1. Builds the React application
+2. Uploads the build artifacts
+3. Deploys to GitHub Pages
+
+The site will be available at: `https://crp28.github.io/ColourfulEggPage/`
+
+#### Manual Deployment
+
+To manually trigger a deployment:
+1. Go to the Actions tab in the GitHub repository
+2. Select the "Deploy to GitHub Pages" workflow
+3. Click "Run workflow"
+
+#### GitHub Pages Setup
+
+To enable GitHub Pages for this repository:
+1. Go to Settings > Pages in the GitHub repository
+2. Under "Build and deployment", select "GitHub Actions" as the source
+3. The workflow will automatically deploy when pushed to the master branch
+
+For more information about Create React App deployment, see: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### `npm run build` fails to minify
 
