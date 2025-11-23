@@ -248,7 +248,7 @@ const CustomAccordion = ({ title, icon: Icon, children }) => {
 const TimelineCard = ({ title, content, isHighlighted = false, className = "" }) => (
     <div
         className={`rounded-lg transition-all duration-300 w-5/6 ${isHighlighted
-            ? 'bg-blue-50 shadow-[0_0_10px_0_rgba(30,58,138,0.2),0_0_20px_0_rgba(30,58,138,0.1)]'
+            ? 'bg-orange-50/70'
             : 'bg-gray-50'
             } ${className}`}
     >
@@ -1348,8 +1348,8 @@ export const FoundationStudyCN = () => {
                                 {/* Timeline Arrow */}
                                 <div className="hidden md:block absolute left-1/2 top-0 bottom-0 -translate-x-1/2 mt-10">
                                     <div className="h-full flex flex-col items-center relative">
-                                        <div className="w-[10px] h-[90%] bg-blue-900/40 relative">
-                                            <div className="absolute -bottom-[20px] left-1/2 transform -translate-x-1/2 border-l-[12px] border-r-[12px] border-t-[20px] border-l-transparent border-r-transparent border-t-blue-900/40" />
+                                        <div className="w-[10px] h-[90%] bg-gradient-to-b from-white/70 to-blue-700/20 relative">
+                                            <div className="absolute -bottom-[20px] left-1/2 transform -translate-x-1/2 border-l-[12px] border-r-[12px] border-t-[20px] border-l-transparent border-r-transparent border-t-blue-700/20" />
                                         </div>
                                     </div>
                                 </div>
