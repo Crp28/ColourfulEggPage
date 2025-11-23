@@ -1821,11 +1821,111 @@ export const DoctoralStudy = () => {
 export const PostUni = () => {
 
 }
-// English versions (aliases for now - to be translated)
-export const ColourfulStudyEN = ColourfulStudyCN;
-export const PriSecStudyEN = PriSecStudyCN;
-export const FoundationStudyEN = FoundationStudyCN;
-export const BachelorStudyEN = BachelorStudyCN;
+
+// English template versions with key headings translated
+// These are simplified templates - detailed content to be added based on CN versions
+
+export const ColourfulStudyEN = () => {
+    return (
+        <div className="min-h-screen bg-white pt-20">
+            <div className="container mx-auto px-4 py-8">
+                <h1 className="text-4xl font-bold text-blue-900 mb-8">Study Abroad in New Zealand</h1>
+                
+                <div className="bg-blue-50 p-6 rounded-lg mb-8">
+                    <p className="text-gray-700 text-lg">
+                        <strong>Template Note:</strong> This is a template page. Content to be added covering:
+                    </p>
+                    <ul className="list-disc list-inside text-gray-700 mt-4 space-y-2">
+                        <li>Overview of New Zealand education system</li>
+                        <li>Primary and secondary education options</li>
+                        <li>Tertiary education (Bachelor's, Master's, PhD)</li>
+                        <li>Foundation and pathway programs</li>
+                        <li>Application process and requirements</li>
+                        <li>Student visa information</li>
+                        <li>Cost of living and tuition fees</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export const PriSecStudyEN = () => {
+    return (
+        <div className="min-h-screen bg-white pt-20">
+            <div className="container mx-auto px-4 py-8">
+                <h1 className="text-4xl font-bold text-blue-900 mb-8">Primary & Secondary Education</h1>
+                
+                <div className="bg-blue-50 p-6 rounded-lg mb-8">
+                    <p className="text-gray-700 text-lg">
+                        <strong>Template Note:</strong> This is a template page. Content to be added covering:
+                    </p>
+                    <ul className="list-disc list-inside text-gray-700 mt-4 space-y-2">
+                        <li>New Zealand school system overview</li>
+                        <li>Year levels and curriculum (NCEA, CIE, IB)</li>
+                        <li>School types (state, integrated, private)</li>
+                        <li>Application process for international students</li>
+                        <li>Accommodation options (homestay, boarding)</li>
+                        <li>Extracurricular activities and school life</li>
+                        <li>Pathway to university</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export const FoundationStudyEN = () => {
+    return (
+        <div className="min-h-screen bg-white pt-20">
+            <div className="container mx-auto px-4 py-8">
+                <h1 className="text-4xl font-bold text-blue-900 mb-8">Foundation Studies</h1>
+                
+                <div className="bg-blue-50 p-6 rounded-lg mb-8">
+                    <p className="text-gray-700 text-lg">
+                        <strong>Template Note:</strong> This is a template page. Content to be added covering:
+                    </p>
+                    <ul className="list-disc list-inside text-gray-700 mt-4 space-y-2">
+                        <li>What is a Foundation program?</li>
+                        <li>Benefits of Foundation studies</li>
+                        <li>Entry requirements</li>
+                        <li>Program duration and structure</li>
+                        <li>Available subjects and streams</li>
+                        <li>University partnerships and guaranteed pathways</li>
+                        <li>Application process and timeline</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export const BachelorStudyEN = () => {
+    return (
+        <div className="min-h-screen bg-white pt-20">
+            <div className="container mx-auto px-4 py-8">
+                <h1 className="text-4xl font-bold text-blue-900 mb-8">Bachelor's Degree Studies</h1>
+                
+                <div className="bg-blue-50 p-6 rounded-lg mb-8">
+                    <p className="text-gray-700 text-lg">
+                        <strong>Template Note:</strong> This is a template page. Content to be added covering:
+                    </p>
+                    <ul className="list-disc list-inside text-gray-700 mt-4 space-y-2">
+                        <li>New Zealand university system overview</li>
+                        <li>All 8 universities and their rankings</li>
+                        <li>Popular programs and majors</li>
+                        <li>Entry requirements (academic and English)</li>
+                        <li>Direct entry vs Foundation/Diploma pathways</li>
+                        <li>Application process and deadlines</li>
+                        <li>Tuition fees and scholarships</li>
+                        <li>Post-study work visa options</li>
+                        <li>Pathway to permanent residence</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 // Backward compatibility exports
 export const ColourfulStudy = ColourfulStudyCN;
