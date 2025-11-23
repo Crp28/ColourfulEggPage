@@ -5,10 +5,10 @@ import { HomePageZH, HomePageEN } from "./pages/home";
 import { Nav, NavEN } from "./pages/nav_bar";
 import Footer from "./pages/footer";
 import NotFound from "./pages/404";
-import { BachelorStudy, ColourfulStudy, FoundationStudy, PriSecStudy } from "./pages/studentpage";
+import { BachelorStudy, ColourfulStudy, FoundationStudy, PriSecStudy, BachelorStudyEN, ColourfulStudyEN, FoundationStudyEN, PriSecStudyEN } from "./pages/studentpage";
 import { CharacterSelection, CharacterSelectionEN } from "./pages/navselect";
-import { NZLife } from "./pages/NZlife";
-import Immigration from "./pages/immigration";
+import { NZLife, NZLifeEN } from "./pages/NZlife";
+import Immigration, { ImmigrationEN } from "./pages/immigration";
 import { ContactUs, ContactUsEN } from "./pages/contact-us";
 
 
