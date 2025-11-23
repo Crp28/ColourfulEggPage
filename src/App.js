@@ -55,14 +55,14 @@ function App() {
 
           <Route path="/en" element={<><NavEN /><HomePageEN /></>}></Route>
           <Route path="/en/guide" element={<><NavEN /><CharacterSelectionEN /></>}></Route>
-          <Route path="/en/LifeinNZ" element={<><NavEN /><NZLife /></>}></Route>
-          <Route path="/en/colourfulstudy" element={<><div className="fixed inset-0 -z-10 bg-gray-500" /><Nav /></>}></Route>
-          <Route path="/en/colourfulstudy/PriSecStudy" element={<><NavEN /></>}></Route>
-          <Route path="/en/colourfulstudy/BachelorStudy" element={<><NavEN /></>}></Route>
-          <Route path="/en/colourfulstudy/MasterStudy" element={<><NavEN /></>}></Route>
-          <Route path="/en/colourfulstudy/FoundationStudy" element={<><NavEN /></>}></Route>
+          <Route path="/en/LifeinNZ" element={<><NavEN /><NZLifeEN /></>}></Route>
+          <Route path="/en/colourfulstudy" element={<><div className="fixed inset-0 -z-10 bg-gray-500" /><NavEN /><ColourfulStudyEN /></>}></Route>
+          <Route path="/en/colourfulstudy/PriSecStudy" element={<><NavEN /><PriSecStudyEN /></>}></Route>
+          <Route path="/en/colourfulstudy/BachelorStudy" element={<><NavEN /><BachelorStudyEN /></>}></Route>
+          <Route path="/en/colourfulstudy/FurtherStudy" element={<><NavEN /></>}></Route>
+          <Route path="/en/colourfulstudy/FoundationStudy" element={<><NavEN /><FoundationStudyEN /></>}></Route>
           <Route path="/en/aboutus" element={<><NavEN /></>}></Route>
-          <Route path="/en/immigration" element={<><NavEN /></>}></Route>
+          <Route path="/en/immigration" element={<><NavEN /><ImmigrationEN /></>}></Route>
           <Route path="/en/connect" element={<><NavEN /><ContactUsEN /></>}></Route>
         </Routes>
         <Footer />
